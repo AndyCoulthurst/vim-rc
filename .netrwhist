@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/fandcou/dev/fxcuif/uif'
 let g:netrw_dirhist_2='/home/fandcou/dev/fxcuif/uif/.ropeproject'
 let g:netrw_dirhist_3='/home/fandcou/dev/fxcuif/fxcuif/templates'
 let g:netrw_dirhist_4='/home/fandcou/.vim'
+let g:netrw_dirhist_5='/home/fandcou/dev/fxcuif/uif'
+let g:netrw_dirhist_6='/home/fandcou/dev/fxcuif/.git'
+let g:netrw_dirhist_7='/home/fandcou/dev/fxcuif'
+let g:netrw_dirhist_8='/home/fandcou/.vim'

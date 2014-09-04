@@ -130,7 +130,7 @@ set laststatus=2
 " and uncomment the part about jedi-vim instead
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
- map <Leader>g :call RopeGotoDefinition()<CR>
+map <Leader>g :call RopeGotoDefinition()<CR>
 let ropevim_enable_shortcuts = 1
 let g:pymode_doc = 0
 let g:pymode_virtualenv = 1
@@ -173,7 +173,13 @@ let g:jedi#popup_select_first = 0
 "" set nofoldenable
 
 map <c-n> :NERDTreeToggle<CR>
-map <Alt-[> :vertical resize -5<CR>
-map <Alt-]> :vertical resize +5<CR>
 
-colorscheme delek
+map <silent> <F5> :le<CR>
+nmap <c-s> :w<CR>
+vmap <c-s> <Esc><c-s>gv
+imap <c-s> <Esc><c-s>
+
+
+colorscheme railscasts2
+
+

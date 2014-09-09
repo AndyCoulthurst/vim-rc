@@ -140,14 +140,16 @@ let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
+let g:pymode_lint_ignore="E501"
+
 map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 
 " Settings for jedi-vim
 " cd ~/.vim/bundle
 " git clone git://github.com/davidhalter/jedi-vim.git
 "" let g:jedi#usages_command = "<leader>z"
-let g:jedi#popup_on_dot = 0
-let g:jedi#popup_select_first = 0
+""let g:jedi#popup_on_dot = 0
+""let g:jedi#popup_select_first = 0
 ""map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 " Better navigating through omnicomplete option list
@@ -182,4 +184,9 @@ imap <c-s> <Esc><c-s>
 
 colorscheme railscasts2
 
-
+let g:surround_45 = "{% \r  %}"
+" -
+let g:surround_61 = "{{ \r  }}"
+" =
+let g:surround_46 = "<!-- \r  -->"
+" .

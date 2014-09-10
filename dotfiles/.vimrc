@@ -181,12 +181,14 @@ nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
 imap <c-s> <Esc><c-s>
 
-
 colorscheme railscasts2
 
-let g:surround_45 = "{% \r  %}"
+"" Template mapping for surround
+let g:surround_45 = "{% \r %}"
 " -
-let g:surround_61 = "{{ \r  }}"
+let g:surround_61 = "{{ \r }}"
 " =
-let g:surround_46 = "<!-- \r  -->"
+let g:surround_46 = "<!-- \r -->"
 " .
+
+nmap <Space> i<Space><Esc>

@@ -191,4 +191,8 @@ let g:surround_61 = "{{ \r }}"
 let g:surround_46 = "<!-- \r -->"
 " .
 
+"" insert spaces in nm
 nmap <Space> i<Space><Esc>
+
+map <c-x> <c-w>c
+nmap <CR> i<CR><Esc>

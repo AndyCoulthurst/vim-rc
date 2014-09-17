@@ -1,6 +1,12 @@
 "Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
+colorscheme railscasts2
+
 set pastetoggle=<F2>
 set clipboard=unnamed
 
@@ -20,10 +26,10 @@ set bs=2     " make backspace behave like normal again
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+map <c-j> <Esc><c-w>j
+map <c-k> <Esc><c-w>k
+map <c-l> <Esc><c-w>l
+map <c-h> <Esc><c-w>h
 
 " easier moving between tabs
 "" map <Leader>n <esc>:tabprevious<CR>
@@ -181,7 +187,6 @@ nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
 imap <c-s> <Esc><c-s>
 
-colorscheme railscasts2
 
 "" Template mapping for surround
 let g:surround_45 = "{% \r %}"
@@ -205,6 +210,5 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
+map <F8> o<Esc>
+map <F9> O<Esc>

@@ -1,4 +1,4 @@
-" Automatic reloading of .vimrc
+"Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
 set pastetoggle=<F2>
@@ -140,7 +140,7 @@ let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
-let g:pymode_lint_ignore="E501"
+let g:pymode_lint_ignore="E501,W391"
 
 map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 
@@ -188,6 +188,8 @@ let g:surround_45 = "{% \r %}"
 " -
 let g:surround_61 = "{{ \r }}"
 " =
+let g:surround_43 = "{{\r}}"
+" +
 let g:surround_46 = "<!-- \r -->"
 " .
 
@@ -195,4 +197,14 @@ let g:surround_46 = "<!-- \r -->"
 nmap <Space> i<Space><Esc>
 
 map <c-x> <c-w>c
-nmap <CR> i<CR><Esc>
+"nmap <CR> i<CR><Esc>
+"" Was interferring with flakes
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif

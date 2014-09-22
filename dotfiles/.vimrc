@@ -209,6 +209,14 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 
 map <F8> o<Esc>
 map <F9> O<Esc>
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup

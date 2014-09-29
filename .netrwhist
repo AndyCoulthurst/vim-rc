@@ -1,9 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/fandcou/scratchpad/polls'
-let g:netrw_dirhist_2='/home/fandcou/scratchpad/testrest/testrest/static/ember-data-django-rest-adapter'
-let g:netrw_dirhist_3='/home/fandcou/.vim/.git'
-let g:netrw_dirhist_4='/home/fandcou/.vim/bundle/python-mode'
-let g:netrw_dirhist_5='/home/fandcou/.vim/.git'
-let g:netrw_dirhist_6='/home/fandcou/dev/uiffe/.git'
-let g:netrw_dirhist_7='/home/fandcou/dev/uiffe/app/routes'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/fandcou/scratchpad/ember_test/js'
+let g:netrw_dirhist_2='/home/fandcou/dev/uiffe/app'
+let g:netrw_dirhist_3='/home/fandcou/dev/fxcuif/fxcuif'
+let g:netrw_dirhist_4='/home/fandcou/scratchpad/simpleapp/config'
+let g:netrw_dirhist_5='/home/fandcou/dev/uiffe/node_modules'
+let g:netrw_dirhist_6='/home/fandcou/scratchpad/simpleapp/app'

@@ -42,9 +42,8 @@ map <c-h> <Esc><c-w>h
 " easier moving of code blocks
 " Try to go into visual mode (v), thenselect several lines of code here and
 " then press ``>`` several times.
-"" vnoremap < <gv  " better indentation
-"" vnoremap > >gv  " better indentation
-
+vnoremap < <gv
+vnoremap > >gv
 
 " Show whitespace
 " MUST be inserted BEFORE the colorscheme command
@@ -147,6 +146,7 @@ let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
 let g:pymode_lint_ignore="E501,W391"
+let g:pymode_rope = 0 
 
 map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 
@@ -220,3 +220,7 @@ map <F9> O<Esc>
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
+
+"html indentation support
+
+map <tab> :tabn<CR>

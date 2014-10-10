@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/fandcou/scratchpad/ember_test/js'
-let g:netrw_dirhist_2='/home/fandcou/dev/uiffe/app'
-let g:netrw_dirhist_3='/home/fandcou/dev/fxcuif/fxcuif'
-let g:netrw_dirhist_4='/home/fandcou/scratchpad/simpleapp/config'
-let g:netrw_dirhist_5='/home/fandcou/dev/uiffe/node_modules'
-let g:netrw_dirhist_6='/home/fandcou/scratchpad/simpleapp/app'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/fandcou/dev/uiffe/.git'

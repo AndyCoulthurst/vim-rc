@@ -197,6 +197,9 @@ let g:surround_43 = "{{\r}}"
 " +
 let g:surround_46 = "<!-- \r -->"
 " .
+let g:surround_44 = "/*\r*/"
+" ,
+
 
 "" insert spaces in nm
 nmap <Space> i<Space><Esc>
@@ -224,3 +227,4 @@ python del powerline_setup
 "html indentation support
 
 map <tab> :tabn<CR>
+

@@ -1,4 +1,5 @@
 "Automatic reloading of .vimrc
+set encoding=utf-8
 autocmd! bufwritepost .vimrc source %
 
 if $COLORTERM == 'gnome-terminal'

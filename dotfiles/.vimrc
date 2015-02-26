@@ -1,3 +1,4 @@
+"
 "Automatic reloading of .vimrc
 set encoding=utf-8
 autocmd! bufwritepost .vimrc source %
@@ -6,24 +7,12 @@ if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
-colorscheme railscasts2
+colorscheme railscasts2  "set colourscheme
 
 set pastetoggle=<F2>
 set clipboard=unnamed
 
-" Mouse and backspace
-"set mouse=a  " on OSX press ALT and click
 set bs=2     " make backspace behave like normal again
-
-
-" Quicksave command
-"" noremap <C-Z> :update<CR>
-"" vnoremap <C-Z> <C-C>:update<CR>
-"" inoremap <C-Z> <C-O>:update<CR>
-
-" Quick quit command
-"" noremap <Leader>e :quit<CR>  " Quit current window
-"" noremap <Leader>E :qa!<CR>   " Quit all windows
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
@@ -32,31 +21,12 @@ map <c-k> <Esc><c-w>k
 map <c-l> <Esc><c-w>l
 map <c-h> <Esc><c-w>h
 
-" easier moving between tabs
-"" map <Leader>n <esc>:tabprevious<CR>
-"" map <Leader>m <esc>:tabnext<CR>
-
-" map sort function to a key
-"" vnoremap <Leader>s :sort<CR>
-
 
 " easier moving of code blocks
 " Try to go into visual mode (v), thenselect several lines of code here and
 " then press ``>`` several times.
 vnoremap < <gv
 vnoremap > >gv
-
-" Show whitespace
-" MUST be inserted BEFORE the colorscheme command
-"" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-"" au InsertLeave * match ExtraWhitespace /\s\+$/
-
-
-" Color scheme
-" mkdir -p ~/.vim/colors && cd ~/.vim/colors
-" wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
-"" set t_Co=256
-"" color wombat256mod
 
 
 " Enable syntax highlighting
@@ -65,24 +35,15 @@ vnoremap > >gv
 filetype plugin indent on
 syntax on
 
+
 " Showing line numbers and length
 set number  " show line numbers
-"set tw=79   " width of document (used by gd)
-"set nowrap  " don't automatically wrap on load
+set nowrap  " don't automatically wrap on load
 "" set fo-=t   " don't automatically wrap text when typing
-"set colorcolumn=80
-"" highlight ColorColumn ctermbg=233
-
-
-" easier formatting of paragraphs
-"" vmap Q gq
-"" nmap Q gqap
-
 
 " Useful settings
 "" set history=700
 "" set undolevels=700
-
 
 " Real programmers don't use TABs but spaces
 set tabstop=4
@@ -112,15 +73,9 @@ set noswapfile
 " Now you can install any plugin into a .vim/bundle/plugin-name/ folder
 call pathogen#infect()
 
-
 " ============================================================================
 " Python IDE Setup
 " ============================================================================
-
-
-" Settings for vim-powerline
-set laststatus=2
-
 
 " Settings for ctrlp
 " cd ~/.vim/bundle
@@ -130,10 +85,7 @@ set laststatus=2
 "" set wildignore+=*_build/*
 "" set wildignore+=*/coverage/*
 
-
 " Settings for python-mode
-" Note: I'm no longer using this. Leave this commented out
-" and uncomment the part about jedi-vim instead
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
 map <Leader>g :call RopeGotoDefinition()<CR>
@@ -151,43 +103,12 @@ let g:pymode_rope = 0
 
 map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 
-" Settings for jedi-vim
-" cd ~/.vim/bundle
-" git clone git://github.com/davidhalter/jedi-vim.git
-"" let g:jedi#usages_command = "<leader>z"
-""let g:jedi#popup_on_dot = 0
-""let g:jedi#popup_select_first = 0
-""map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
-
-" Better navigating through omnicomplete option list
-" See http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
-"" set completeopt=longest,menuone
-"" function! OmniPopup(action)
-""     if pumvisible()
-""         if a:action == 'j'
-""             return "\<C-N>"
-""         elseif a:action == 'k'
-""             return "\<C-P>"
-""         endif
-""     endif
-""     return a:action
-"" endfunction
-
-"" inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
-"" inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
-
-" Python folding
-" mkdir -p ~/.vim/ftplugin
-" wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
-"" set nofoldenable
-
 map <c-n> :NERDTreeToggle<CR>
 
 map <silent> <F5> :le<CR>
 nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
 imap <c-s> <Esc><c-s>
-
 
 "" Template mapping for surround
 let g:surround_45 = "{% \r %}"
@@ -201,7 +122,6 @@ let g:surround_46 = "<!-- \r -->"
 let g:surround_44 = "/*\r*/"
 " ,
 
-
 "" insert spaces in nm
 nmap <Space> i<Space><Esc>
 
@@ -209,6 +129,7 @@ map <c-x> <c-w>c
 "nmap <CR> i<CR><Esc>
 "" Was interferring with flakes
 
+"" disable arrowkeys to speed up
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -218,14 +139,22 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+"" insert line below and above respectively
 map <F8> o<Esc>
 map <F9> O<Esc>
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-
-"html indentation support
-
 map <tab> :tabn<CR>
 
+"syntastic
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"vim-airline (always show)
+set laststatus=2

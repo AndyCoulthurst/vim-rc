@@ -54,10 +54,10 @@ set expandtab
 
 
 " Make search case insensitive
-"" set hlsearch
-"" set incsearch
-"" set ignorecase
-"" set smartcase
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
 
 " Disable stupid backup and swap files - they trigger too many events
@@ -158,3 +158,7 @@ let g:syntastic_check_on_wq = 0
 
 "vim-airline (always show)
 set laststatus=2
+
+"vim jedi for python autocompletion
+let g:jedi#popup_select_first = 0
+let g:jedi#popup_on_dot = 0

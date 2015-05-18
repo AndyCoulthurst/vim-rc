@@ -163,7 +163,6 @@ let g:airline_powerline_fonts = 1
 let g:jedi#popup_select_first = 0
 let g:jedi#popup_on_dot = 0
 
-colorscheme railscasts2  "set colourscheme
 
 " Syntax for multiple tag files are
 " set tags=/my/dir1/tags, /my/dir2/tags
@@ -178,3 +177,5 @@ let Tlist_File_Fold_Auto_Close = 1
 map <F7> :TlistToggle<CR>
 
 cmap w!! w !sudo tee > /dev/null %
+
+"colorscheme railscasts "set colourscheme

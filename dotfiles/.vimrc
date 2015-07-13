@@ -87,7 +87,7 @@ call pathogen#infect()
 " Settings for python-mode
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
-map <Leader>g :call RopeGotoDefinition()<CR>
+"map <Leader>g :call RopeGotoDefinition()<CR>
 let ropevim_enable_shortcuts = 1
 let g:pymode_doc = 0
 let g:pymode_virtualenv = 1
@@ -178,4 +178,14 @@ map <F7> :TlistToggle<CR>
 
 cmap w!! w !sudo tee > /dev/null %
 
-"colorscheme railscasts "set colourscheme
+colorscheme molokai     "set colourscheme
+
+let g:I=0
+function! INC(increment)
+      let g:I =g:I + a:increment
+        return g:I
+    endfunction
+
+" e.g   s/$/\=INC(1)/
+
+

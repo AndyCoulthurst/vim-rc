@@ -163,7 +163,6 @@ let g:airline_powerline_fonts = 1
 let g:jedi#popup_select_first = 0
 let g:jedi#popup_on_dot = 0
 
-
 " Syntax for multiple tag files are
 " set tags=/my/dir1/tags, /my/dir2/tags
 set tags=tags;$HOME/.vim/tags/
@@ -188,4 +187,5 @@ function! INC(increment)
 
 " e.g   s/$/\=INC(1)/
 
-
+" To generate tags recursively then <C-]> to follow
+" ctags -R

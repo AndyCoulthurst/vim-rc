@@ -15,11 +15,10 @@ set bs=2     " make backspace behave like normal again
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
-map <c-j> <Esc><c-w>j
-map <c-k> <Esc><c-w>k
-map <c-l> <Esc><c-w>l
-map <c-h> <Esc><c-w>h
-
+noremap <c-j> <Esc><c-w>j
+noremap <c-k> <Esc><c-w>k
+noremap <c-l> <Esc><c-w>l
+noremap <c-h> <Esc><c-w>h
 
 " easier moving of code blocks
 " Try to go into visual mode (v), thenselect several lines of code here and
@@ -27,13 +26,11 @@ map <c-h> <Esc><c-w>h
 vnoremap < <gv
 vnoremap > >gv
 
-
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
 "" filetype off
 filetype plugin indent on
 syntax on
-
 
 " Showing line numbers and length
 set number  " show line numbers
@@ -57,7 +54,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
 
 " Disable stupid backup and swap files - they trigger too many events
 " for file system watchers
@@ -100,14 +96,14 @@ let g:pymode_syntax_builtin_funcs = 0
 let g:pymode_lint_ignore="E501,W391"
 let g:pymode_rope = 0 
 
-map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
+noremap <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 
-map <c-n> :NERDTreeToggle<CR>
+noremap <c-n> :NERDTreeToggle<CR>
 
-map <silent> <F5> :le<CR>
-nmap <c-s> :w<CR>
-vmap <c-s> <Esc><c-s>gv
-imap <c-s> <Esc><c-s>
+noremap <silent> <F5> :le<CR>
+nnoremap <c-s> :w<CR>
+vnoremap <c-s> <Esc><c-s>gv
+inoremap <c-s> <Esc><c-s>
 
 "" Template mapping for surround
 let g:surround_45 = "{% \r %}"
@@ -122,9 +118,8 @@ let g:surround_44 = "/*\r*/"
 " ,
 
 "" insert spaces in nm
-nmap <Space> i<Space><Esc>
-
-map <c-x> <c-w>c
+nnoremap <Space> i<Space><Esc>
+"map <c-x> <c-w>c
 "nmap <CR> i<CR><Esc>
 "" Was interferring with flakes
 
@@ -133,10 +128,10 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 "" insert line below and above respectively
 map <F8> o<Esc>
@@ -167,7 +162,7 @@ let g:jedi#popup_on_dot = 0
 " set tags=/my/dir1/tags, /my/dir2/tags
 set tags=tags;$HOME/.vim/tags/
 
-" TagList Plugin Configuration
+" TagList Plugin Configuration - change to tagbar
 let Tlist_Ctags_Cmd='/usr/bin/ctags'
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
@@ -184,8 +179,12 @@ function! INC(increment)
       let g:I =g:I + a:increment
         return g:I
     endfunction
-
 " e.g   s/$/\=INC(1)/
 
+inoremap <C-Space> <C-x><C-o>
+imap <C-@> <C-Space>
+
+" set omnifunc=syntaxcomplete#Complete
+"
 " To generate tags recursively then <C-]> to follow
 " ctags -R

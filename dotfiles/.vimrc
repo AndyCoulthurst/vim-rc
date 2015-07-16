@@ -140,7 +140,6 @@ map <F9> O<Esc>
 map <tab> :tabn<CR>
 
 "syntastic
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -149,6 +148,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"let g:syntastic_javascript_checkers = ['jshint']
 
 "vim-airline (always show)
 set laststatus=2
@@ -162,13 +163,13 @@ let g:jedi#popup_on_dot = 0
 " set tags=/my/dir1/tags, /my/dir2/tags
 set tags=tags;$HOME/.vim/tags/
 
-" TagList Plugin Configuration - change to tagbar
-let Tlist_Ctags_Cmd='/usr/bin/ctags'
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Close_On_Select = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_File_Fold_Auto_Close = 1
-map <F7> :TlistToggle<CR>
+" TagList Plugin Configuration 
+"let Tlist_Ctags_Cmd='/usr/bin/ctags'
+"let Tlist_GainFocus_On_ToggleOpen = 1
+"let Tlist_Close_On_Select = 1
+"let Tlist_Use_Right_Window = 1
+"let Tlist_File_Fold_Auto_Close = 1
+map <F7> :TagbarToggle<CR>
 
 cmap w!! w !sudo tee > /dev/null %
 

@@ -1,12 +1,11 @@
-"
-"Automatic reloading of .vimrc
+call pathogen#infect()
+
 set encoding=utf-8
 autocmd! bufwritepost .vimrc source %
 
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
-
 
 set pastetoggle=<F2>
 set clipboard=unnamed
@@ -48,7 +47,6 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
-
 " Make search case insensitive
 set hlsearch
 set incsearch
@@ -66,7 +64,6 @@ set noswapfile
 " mkdir -p ~/.vim/autoload ~/.vim/bundle
 " curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 " Now you can install any plugin into a .vim/bundle/plugin-name/ folder
-call pathogen#infect()
 
 " ============================================================================
 " Python IDE Setup
@@ -83,7 +80,9 @@ call pathogen#infect()
 " Settings for python-mode
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
-"map <Leader>g :call RopeGotoDefinition()<CR>
+"let g:jedi#goto_definitions_command = <leader>d
+noremap <Leader>] :call jedi#goto_definitions()<CR>
+
 let ropevim_enable_shortcuts = 1
 let g:pymode_doc = 0
 let g:pymode_virtualenv = 1
@@ -164,11 +163,6 @@ let g:jedi#popup_on_dot = 0
 set tags=tags;$HOME/.vim/tags/
 
 " TagList Plugin Configuration 
-"let Tlist_Ctags_Cmd='/usr/bin/ctags'
-"let Tlist_GainFocus_On_ToggleOpen = 1
-"let Tlist_Close_On_Select = 1
-"let Tlist_Use_Right_Window = 1
-"let Tlist_File_Fold_Auto_Close = 1
 map <F7> :TagbarToggle<CR>
 
 cmap w!! w !sudo tee > /dev/null %
@@ -189,3 +183,6 @@ imap <C-@> <C-Space>
 "
 " To generate tags recursively then <C-]> to follow
 " ctags -R
+"
+noremap <Leader>[ :TernDefTab<CR>
+

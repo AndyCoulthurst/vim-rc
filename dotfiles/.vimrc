@@ -3,9 +3,9 @@ call pathogen#infect()
 set encoding=utf-8
 autocmd! bufwritepost .vimrc source %
 
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
+"if $COLORTERM == 'gnome-terminal'
+set t_Co=256
+"endif
 
 set pastetoggle=<F2>
 set clipboard=unnamed

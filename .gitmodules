@@ -48,4 +48,7 @@
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
-	url = https://github.com/elzr/vim-json.git
+    url = https://github.com/elzr/vim-json.git
+[submodule "bundle/riv.vim"]
+	path = bundle/riv.vim
+    url = https://github.com/Rykka/riv.vim.git

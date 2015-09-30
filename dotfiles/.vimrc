@@ -136,7 +136,6 @@ inoremap <right> <nop>
 map <F8> o<Esc>
 map <F9> O<Esc>
 
-map <tab> :tabn<CR>
 
 "syntastic
 set statusline+=%#warningmsg#
@@ -185,4 +184,9 @@ imap <C-@> <C-Space>
 " ctags -R
 "
 noremap <Leader>[ :TernDefTab<CR>
+
+map <tab> :tabn<CR>
+
+" disable rst folding on save
+let g:riv_disable_folding = 1
 

@@ -96,6 +96,7 @@ let g:pymode_lint_ignore="E501,W391"
 let g:pymode_rope = 0 
 
 noremap <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
+noremap <Leader>B Ofrom pudb import set_trace; set_trace() # PUDB -BREAKPOINT<C-c>
 
 noremap <c-n> :NERDTreeToggle<CR>
 
@@ -154,6 +155,7 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 
 "vim jedi for python autocompletion
+"let g:jedi#auto_initialization = 0
 let g:jedi#popup_select_first = 0
 let g:jedi#popup_on_dot = 0
 
@@ -189,4 +191,6 @@ map <tab> :tabn<CR>
 
 " disable rst folding on save
 let g:riv_disable_folding = 1
+
+
 
